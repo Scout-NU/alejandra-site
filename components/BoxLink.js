@@ -1,4 +1,13 @@
 import { getString } from "../lib/richText";
+import styled from 'styled-components';
+
+const BoxLinkTitle = styled.h2`
+  font-size: 24px;
+`;
+
+const BoxLinkDescription = styled.a`
+  font-size: 16px;
+`;
 
 export default function BoxLink({ boxLinkData }) {
     const {
@@ -8,8 +17,8 @@ export default function BoxLink({ boxLinkData }) {
     } = boxLinkData;
   return (
     <>
-        {getString(boxLinkTitle)}
-        {getString(boxLinkDescription)}
+        <BoxLinkTitle>{getString(boxLinkTitle)}</BoxLinkTitle>
+        <BoxLinkDescription>{getString(boxLinkDescription)}</BoxLinkDescription>
         {boxLinkLink}
     </>
   );
