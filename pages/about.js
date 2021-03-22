@@ -1,9 +1,10 @@
 import { renderRichText } from "../lib/richText";
-import { getAboutPage, getNavigation, getFooter } from "../lib/api";
+import { getAboutPage, getNavigation, getFooter, getBoxLink } from "../lib/api";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import BoxLink from "../components/BoxLink";
 
-export default function AboutPage({ aboutPageData, navigationData, footerData }) {
+export default function AboutPage({ aboutPageData, navigationData, footerData, boxLink1Data }) {
   const {
     about_page_title: aboutPageTitle,
     camaryn_image: camarynImage,
@@ -35,6 +36,7 @@ export default function AboutPage({ aboutPageData, navigationData, footerData })
           <br />
         </a>
       ))}
+      <BoxLink boxLinkData={boxLink1Data} />
       <Footer footerData={footerData} />
     </>
   );
@@ -44,12 +46,14 @@ export async function getStaticProps() {
   const aboutPageData = await getAboutPage();
   const footerData = await getFooter();
   const navigationData = await getNavigation();
+  const boxLink1Data = await getBoxLink(aboutPageData.box_link_1.id);
 
   return {
     props: {
       aboutPageData,
       footerData,
       navigationData,
+      boxLink1Data,
     },
   };
 }
