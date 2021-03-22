@@ -2,13 +2,20 @@ import { getString } from "../lib/richText";
 import styled from 'styled-components';
 
 const BoxLinkTitle = styled.h2`
-  font-size: 24px;
+    font-size: 24px;
 `;
 
-const BoxLinkDescription = styled.a`
-  font-size: 16px;
+const BoxLinkDescription = styled.p`
+    font-size: 16px;
 `;
 
+const Box = styled.div`
+    margin: auto;
+    overflow: hidden;
+    width: 80%;
+    background-color: #DEB887;
+    border-radius: 19px;
+`;
 export default function BoxLink({ boxLinkData }) {
     const {
         box_link_title: boxLinkTitle,
@@ -17,9 +24,11 @@ export default function BoxLink({ boxLinkData }) {
     } = boxLinkData;
   return (
     <>
-        <BoxLinkTitle>{getString(boxLinkTitle)}</BoxLinkTitle>
-        <BoxLinkDescription>{getString(boxLinkDescription)}</BoxLinkDescription>
-        {boxLinkLink}
+        <Box>
+            <BoxLinkTitle>{getString(boxLinkTitle)}</BoxLinkTitle>
+            <BoxLinkDescription>{getString(boxLinkDescription)}</BoxLinkDescription>
+            {boxLinkLink}
+        </Box>
     </>
   );
 }
