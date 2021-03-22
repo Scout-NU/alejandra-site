@@ -5,11 +5,13 @@ import {
   getStoryInquiryPage,
   getNavigation,
   getFooter,
+  getBoxLink,
 } from "../lib/api";
 import AuthorTestimony from "../components/AuthorTestimony";
 import QuestionAnswer from "../components/QuestionAnswer";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import BoxLink from "../components/BoxLink";
 
 export default function StoryInquiryPage({
   storyInquiryPageData,
@@ -17,6 +19,8 @@ export default function StoryInquiryPage({
   questionsAndAnswers,
   navigationData,
   footerData,
+  boxLink1Data,
+  boxLink2Data,
 }) {
   const {
     story_submission_title: storySubmissionTitle,
@@ -44,6 +48,8 @@ export default function StoryInquiryPage({
       {questionsAndAnswers.map((item) => {
         return <QuestionAnswer key={item.id} questionAnswerData={item} />;
       })}
+      <BoxLink boxLinkData={boxLink1Data} />
+      <BoxLink boxLinkData={boxLink2Data} />
       <Footer footerData={footerData} />
     </>
   );
@@ -63,6 +69,8 @@ export async function getStaticProps() {
 
   const footerData = await getFooter();
   const navigationData = await getNavigation();
+  const boxLink1Data = await getBoxLink(storyInquiryPageData.box_link_1.id);
+  const boxLink2Data = await getBoxLink(storyInquiryPageData.box_link_2.id);
 
   return {
     props: {
@@ -71,6 +79,8 @@ export async function getStaticProps() {
       questionsAndAnswers,
       footerData,
       navigationData,
+      boxLink1Data,
+      boxLink2Data
     },
   };
 }
