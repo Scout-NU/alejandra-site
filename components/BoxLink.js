@@ -3,25 +3,23 @@ import styled from 'styled-components';
 
 const BoxLinkTitle = styled.h2`
     font-size: 24px;
-    padding: 30px 40px 0 40px;
-    position: absolute;
+    padding: 1em 2em 0 2em;
+
 `;
 
 // top right bottom left
 
 const BoxLinkDescription = styled.p`
     font-size: 16px;
-    padding: 0 40px 40px 30px;
-    position: absolute;
+    padding: 0 2em 1.8em 3em;
+    margin-top: .5em;
 `;
 
 const Box = styled.div`
     margin: auto;
-    display: flex;
-    position: relative;
     overflow: hidden;
-    max-width: 500px;
-    background-color: #DEB887;
+    max-width: 25em;
+    background-color: #C4C4C4;
     border-radius: 19px;
 `;
 
