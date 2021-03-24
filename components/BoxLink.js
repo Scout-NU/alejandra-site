@@ -1,5 +1,6 @@
 import { getString } from "../lib/richText";
 import styled from 'styled-components';
+import BoxLinkArrow from "../icons";
 
 const BoxLinkTitle = styled.h2`
     font-size: 24px;
@@ -23,6 +24,14 @@ const Box = styled.div`
     border-radius: 19px;
 `;
 
+const ArrowContainer = styled.div`
+
+`;
+
+const Arrow = styled.div`
+    padding: 1.5em 0 0 17em;
+`;
+
 export default function BoxLink({ boxLinkData }) {
     const {
         box_link_title: boxLinkTitle,
@@ -33,7 +42,11 @@ export default function BoxLink({ boxLinkData }) {
     <>
         <Box>
             <BoxLinkTitle>{getString(boxLinkTitle)}</BoxLinkTitle>
-            <BoxLinkDescription>{getString(boxLinkDescription)}</BoxLinkDescription>
+                <BoxLinkDescription>{getString(boxLinkDescription)}
+                    <Arrow>
+                        <BoxLinkArrow />
+                    </Arrow>
+                </BoxLinkDescription>
         </Box>
     </>
   );
