@@ -8,8 +8,6 @@ const BoxLinkTitle = styled.h2`
 
 `;
 
-// top right bottom left
-
 const BoxLinkDescription = styled.p`
     font-size: 16px;
     padding: 0 2em 1.8em 3em;
@@ -22,10 +20,6 @@ const Box = styled.div`
     max-width: 25em;
     background-color: #C4C4C4;
     border-radius: 19px;
-`;
-
-const ArrowContainer = styled.div`
-
 `;
 
 const Arrow = styled.div`
@@ -42,7 +36,8 @@ export default function BoxLink({ boxLinkData }) {
     <>
         <Box>
             <BoxLinkTitle>{getString(boxLinkTitle)}</BoxLinkTitle>
-                <BoxLinkDescription>{getString(boxLinkDescription)}
+                <BoxLinkDescription>
+                    {getString(boxLinkDescription)}
                     <Arrow>
                         <BoxLinkArrow />
                     </Arrow>
