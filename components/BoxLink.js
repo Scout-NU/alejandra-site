@@ -18,6 +18,7 @@ const BoxLinkDescription = styled.p`
     margin-top: .5em;
     @media ${max.tabletLg} {
         padding: 0 1em 0 1.6em;
+        display: flex;
       }
 `;
 
