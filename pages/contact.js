@@ -1,8 +1,10 @@
-import { renderRichText } from "../lib/richText";
 import { getContactPage, getNavigation, getFooter, getBoxLink } from "../lib/api";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { H1, P } from "../style/typography";
+import { getString } from "../lib/richText";
 import BoxLink from "../components/BoxLink";
+
 export default function ContactPage({ contactPageData, navigationData, footerData, boxLink1Data }) {
   const {
     contact_page_title: contactPageTitle,
@@ -12,8 +14,8 @@ export default function ContactPage({ contactPageData, navigationData, footerDat
   return (
     <>
       <Navigation navigationData={navigationData} />
-      {renderRichText(contactPageTitle)}
-      {renderRichText(contactPageDescription)}
+      <H1>{getString(contactPageTitle)}</H1>
+      <P>{getString(contactPageDescription)}</P>
       <BoxLink boxLinkData={boxLink1Data} />
       <Footer footerData={footerData} />
     </>
