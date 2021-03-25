@@ -2,6 +2,15 @@ import { getString } from "../lib/richText";
 import styled from 'styled-components';
 import BoxLinkArrow from "../icons";
 import { min, max } from "../lib/responsive";
+import { H3, P } from "../style/typography";
+
+const H3Styled = styled(H3)`
+    font-size: clamp(.5em, 2vw, 1.3em);
+`;
+
+const PStyled = styled(P)`
+    font-size: clamp(.5em, 1.5vw, 1.3em);
+`
 
 const BoxLinkTitle = styled.h2`
     font-size: 24px;
@@ -12,13 +21,13 @@ const BoxLinkTitle = styled.h2`
 
 `;
 
-const BoxLinkDescription = styled.p`
+const Wrapper = styled.p`
+    display: flex;
     font-size: 16px;
     padding: 0 2em 1.5em 3em;
     margin-top: .5em;
     @media ${max.tabletLg} {
         padding: 0 1em 0 1.6em;
-        display: flex;
       }
 `;
 
@@ -34,7 +43,7 @@ const Box = styled.div`
 `;
 
 const Arrow = styled.div`
-    padding: 1.5em 0 0 17em;
+    padding: 1.5em 0 0 0;
     @media ${max.tabletLg} {
         padding: 1em 0 0 0;
       }
@@ -49,13 +58,17 @@ export default function BoxLink({ boxLinkData }) {
   return (
     <>
         <Box>
-            <BoxLinkTitle>{getString(boxLinkTitle)}</BoxLinkTitle>
-                <BoxLinkDescription>
-                    {getString(boxLinkDescription)}
+            <BoxLinkTitle>
+                <H3Styled>{getString(boxLinkTitle)}</H3Styled>
+            </BoxLinkTitle>
+                <Wrapper>
+                    <PStyled>
+                    {getString(boxLinkDescription)}   
+                    </PStyled>
                     <Arrow>
                         <BoxLinkArrow />
                     </Arrow>
-                </BoxLinkDescription>
+                </Wrapper>
         </Box>
     </>
   );
