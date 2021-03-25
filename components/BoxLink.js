@@ -25,14 +25,13 @@ const Wrapper = styled.p`
     display: flex;
     font-size: 16px;
     padding: 0 2em 1.5em 3em;
-    margin-top: .5em;
+
     @media ${max.tabletLg} {
         padding: 0 1em 0 1.6em;
       }
 `;
 
 const Box = styled.div`
-    margin: auto;
     overflow: hidden;
     max-width: 25em;
     background-color: #C4C4C4;
