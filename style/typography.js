@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { min } from '../lib/responsive';
+import { colors } from './colors';
 const fonts = {
   swearDisplay: 'swear-display, serif',
   poppins: 'poppins, sans-serif',
@@ -23,12 +24,13 @@ const fontWeights = {
 const H1 = styled.h1`
   font-family: ${fonts.swearDisplay};
   font-weight: ${fontWeights.medium};
+  color: ${colors.BURNTORANGE};
   font-size: 16em;
   @media ${min.tablet} {
     font-size: 13em;
   }
   @media ${min.desktop} {
-    font-size: 11em;
+    font-size: 10.5em;
   }
 `;
 
