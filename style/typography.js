@@ -30,7 +30,7 @@ const H1 = styled.h1`
     font-size: 13em;
   }
   @media ${min.desktop} {
-    font-size: 10.5em;
+    font-size: 10em;
   }
 `;
 
@@ -38,12 +38,6 @@ const H2 = styled.h2`
   font-size: ${fontSizes.h2};
   font-family: ${fonts.swearDisplay};
   font-weight: ${fontWeights.medium};
-  @media ${min.tablet} {
-    font-size: 8em;
-  }
-  @media ${min.desktop} {
-    font-size: 5em;
-  }
 `;
 
 const H3 = styled.h3`
@@ -51,18 +45,12 @@ const H3 = styled.h3`
   font-family: ${fonts.poppins};
   font-style: ${fontStyles.italic};
   font-weight: ${fontWeights.medium};
-  @media ${min.tablet} {
-    font-size: 5em;
-  }
-  @media ${min.desktop} {
-    font-size: 3em;
-  }
 `;
 
 const P = styled.p`
   font-family: ${fonts.poppins};
   font-weight: ${fontWeights.regular};
-  font-size: 2em;
+  font-size: 2.2em;
   @media ${min.tablet} {
     font-size: 1.6em;
   }
