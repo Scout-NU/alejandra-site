@@ -7,7 +7,6 @@ const fonts = {
 };
 
 const fontSizes = {
-  h1: 'clamp(11em, 25vw, 14em)',
   h2: 'clamp(5em, 10vw, 8em)',
   h3: 'clamp(3em, 5vw, 4em)',
 };
@@ -23,16 +22,28 @@ const fontWeights = {
 };
 
 const H1 = styled.h1`
-  font-size: ${fontSizes.h1};
   font-family: ${fonts.swearDisplay};
   font-weight: ${fontWeights.medium};
   color: ${colors.BURNTORANGE};
+  font-size: 16em;
+  @media ${min.tablet} {
+    font-size: 13em;
+  }
+  @media ${min.desktop} {
+    font-size: 10.5em;
+  }
 `;
 
 const H2 = styled.h2`
   font-size: ${fontSizes.h2};
   font-family: ${fonts.swearDisplay};
   font-weight: ${fontWeights.medium};
+  @media ${min.tablet} {
+    font-size: 8em;
+  }
+  @media ${min.desktop} {
+    font-size: 5em;
+  }
 `;
 
 const H3 = styled.h3`
@@ -40,6 +51,12 @@ const H3 = styled.h3`
   font-family: ${fonts.poppins};
   font-style: ${fontStyles.italic};
   font-weight: ${fontWeights.medium};
+  @media ${min.tablet} {
+    font-size: 5em;
+  }
+  @media ${min.desktop} {
+    font-size: 3em;
+  }
 `;
 
 const P = styled.p`
@@ -47,7 +64,10 @@ const P = styled.p`
   font-weight: ${fontWeights.regular};
   font-size: 2em;
   @media ${min.tablet} {
-    font-size: 1.2em;
+    font-size: 1.6em;
+  }
+  @media ${min.desktop} {
+    font-size: 1em;
   }
 `;
 
