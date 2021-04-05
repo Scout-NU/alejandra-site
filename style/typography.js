@@ -30,7 +30,7 @@ const H1 = styled.h1`
     font-size: 13em;
   }
   @media ${min.desktop} {
-    font-size: 10.5em;
+    font-size: 10em;
   }
 `;
 
