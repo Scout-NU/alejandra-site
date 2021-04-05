@@ -38,12 +38,6 @@ const H2 = styled.h2`
   font-size: ${fontSizes.h2};
   font-family: ${fonts.swearDisplay};
   font-weight: ${fontWeights.medium};
-  @media ${min.tablet} {
-    font-size: 8em;
-  }
-  @media ${min.desktop} {
-    font-size: 5em;
-  }
 `;
 
 const H3 = styled.h3`
@@ -51,12 +45,6 @@ const H3 = styled.h3`
   font-family: ${fonts.poppins};
   font-style: ${fontStyles.italic};
   font-weight: ${fontWeights.medium};
-  @media ${min.tablet} {
-    font-size: 5em;
-  }
-  @media ${min.desktop} {
-    font-size: 3em;
-  }
 `;
 
 const P = styled.p`
