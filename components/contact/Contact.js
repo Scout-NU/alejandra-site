@@ -1,6 +1,7 @@
 import { getString } from '../../lib/richText';
 import React from 'react';
-import { H1, P } from '../../style/typography';
+import { P } from '../../style/typography';
+import H1Styled from '../headers/H1Styled';
 import ContactConfirmation from '../contactConfirmation/ContactConfirmation';
 
 export default function ContactPage({ contactPageData }) {
@@ -27,10 +28,10 @@ export default function ContactPage({ contactPageData }) {
 
   return (
     <>
-      <H1>{getString(contactPageTitleRegular)}</H1>
-      <H1>
-        <i>{getString(contactPageTitleItalic)}</i>
-      </H1>
+      <H1Styled
+        regular={contactPageTitleRegular}
+        italicized={contactPageTitleItalic}
+      ></H1Styled>
       <P>{getString(contactPageDescription)}</P>
       <img src={contactImageTop.url} alt={contactImageTop.alt} />
       <img src={contactImageBottom.url} alt={contactImageBottom.alt} />
