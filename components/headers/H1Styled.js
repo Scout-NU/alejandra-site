@@ -1,23 +1,5 @@
 import { getString } from '../../lib/richText';
-import { H1 } from '../../style/typography';
-import styled from 'styled-components';
-
-const H1Container = styled.div`
-  padding: 0;
-  margin: 0 0 0 5em;
-`;
-
-const H1Regular = styled(H1)`
-  padding: 0;
-  margin: 0 auto;
-  line-height: 210px;
-`;
-
-const H1Italicized = styled(H1)`
-  padding: 0;
-  margin: 0 0 0 0.8em;
-  line-height: 210px;
-`;
+import { H1Container, H1Italicized, H1Regular } from './H1Styled.styles';
 
 export default function H1Styled({ regular, italicized }) {
   return (
