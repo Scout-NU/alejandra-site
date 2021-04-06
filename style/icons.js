@@ -4,7 +4,6 @@ export default function SquiggleUnderline20() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 449.1 34.28"
       fill="none"
       stroke="#d5b482"
       strokeLinecap="round"
