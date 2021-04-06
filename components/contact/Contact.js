@@ -3,6 +3,7 @@ import React from 'react';
 import { P } from '../../style/typography';
 import H1Styled from '../H1Styled/H1Styled';
 import ContactConfirmation from '../contactConfirmation/ContactConfirmation';
+import { SvgStyled } from './Contact.styles';
 
 export default function ContactPage({ contactPageData }) {
   const {
@@ -32,6 +33,7 @@ export default function ContactPage({ contactPageData }) {
         regular={contactPageTitleRegular}
         italicized={contactPageTitleItalic}
       ></H1Styled>
+      <SvgStyled />
       <P>{getString(contactPageDescription)}</P>
       <img src={contactImageTop.url} alt={contactImageTop.alt} />
       <img src={contactImageBottom.url} alt={contactImageBottom.alt} />
