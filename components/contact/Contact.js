@@ -1,7 +1,7 @@
 import { getString } from '../../lib/richText';
 import React from 'react';
 import { P } from '../../style/typography';
-import H1Styled from '../headers/H1Styled';
+import H1Styled from '../H1Styled/H1Styled';
 import ContactConfirmation from '../contactConfirmation/ContactConfirmation';
 
 export default function ContactPage({ contactPageData }) {
