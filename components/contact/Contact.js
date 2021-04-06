@@ -3,6 +3,8 @@ import H1Styled from '../H1Styled/H1Styled';
 import ContactConfirmation from '../contactConfirmation/ContactConfirmation';
 import PageDescription from '../pageDescription/PageDescription';
 import BoxLink from '../boxLink/BoxLink';
+import { icons } from '../../style/icons';
+import { SquiggleUnderline } from './Contact.styles';
 export default function ContactPage({ contactPageData, boxLinkData }) {
   const {
     contact_page_title_regular: contactPageTitleRegular,
@@ -29,7 +31,7 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
         regular={contactPageTitleRegular}
         italicized={contactPageTitleItalic}
       ></H1Styled>
-      {/* <SvgStyled /> */}
+      <SquiggleUnderline src={icons.SQUIGGLE_UNDERLINE} />
       <PageDescription description={contactPageDescription} />
       <BoxLink boxLinkData={boxLinkData} />
       <ContactConfirmation contactConfirmationData={contactConfirmationData} />
