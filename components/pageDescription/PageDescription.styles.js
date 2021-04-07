@@ -71,11 +71,17 @@ const Img = styled.img`
   opacity: 10%;
   object-fit: cover;
   position: absolute;
+  @media ${min.mobile} {
+    top: 7em;
+    right: 0;
+    width: 29em;
+    height: 24em;
+}
   @media ${min.tablet} {
     top: 7em;
     right: 0;
-    width: 38.5em;
-    height: 38em;
+    width: 29em;
+    height: 24em;
 }
   @media ${min.desktop} {
     top: 5em;

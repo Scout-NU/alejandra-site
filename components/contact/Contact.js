@@ -33,11 +33,11 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
         italicized={contactPageTitleItalic}
       ></H1Styled>
       <SquiggleUnderline src={icons.SQUIGGLE_UNDERLINE} />
-      {/* <PageDescription
+      <PageDescription
         description={contactPageDescription}
         arrowText="EXPLORE THE ARCHIVE"
         img={contactImageTop.url}
-      /> */}
+      />
       <BoxLink boxLinkData={boxLinkData} />
       <ContactConfirmation contactConfirmationData={contactConfirmationData} />
     </>
