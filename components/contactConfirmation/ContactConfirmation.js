@@ -15,7 +15,7 @@ export default function ContactConfirmation({ contactConfirmationData }) {
       {renderRichText(contactConfirmationTitleItalic2)}
       {renderRichText(contactConfirmationTitleRegular3)}
       {renderRichText(description)}
-      <img src={image.url} alt={image.alt} />
+      {/* <img src={image.url} alt={image.alt} /> */}
     </>
   );
 }
