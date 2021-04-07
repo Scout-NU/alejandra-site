@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
 const BoxLinkContainer = styled.div`
-  padding: 0 0 0 50em;
+  padding: 0 0 0 40em;
 `;
 
-const VerticalEllipse = styled.div`
-  height: 19em;
-  width: 14em;
-  border-radius: 50%;
-  border: 2px solid white;
+const Ellipse = styled.img`
+  height: 55%;
+  width: 55%;
 `;
 
-const HorizontalEllipse = styled.div`
-  margin: 0 auto;
-`;
-
-export { BoxLinkContainer, VerticalEllipse, HorizontalEllipse };
+export { BoxLinkContainer, Ellipse };

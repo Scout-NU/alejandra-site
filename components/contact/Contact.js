@@ -32,7 +32,10 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
         italicized={contactPageTitleItalic}
       ></H1Styled>
       <SquiggleUnderline src={icons.SQUIGGLE_UNDERLINE} />
-      <PageDescription description={contactPageDescription} />
+      <PageDescription
+        description={contactPageDescription}
+        arrowText="Let's Connect"
+      />
       <BoxLink boxLinkData={boxLinkData} />
       <ContactConfirmation contactConfirmationData={contactConfirmationData} />
     </>
