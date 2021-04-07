@@ -10,6 +10,7 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
     contact_page_title_regular: contactPageTitleRegular,
     contact_page_title_italic: contactPageTitleItalic,
     contact_page_description: contactPageDescription,
+    contact_image_top: contactImageTop,
     contact_confirmation_title_regular_1,
     contact_confirmation_title_italic_2,
     contact_confirmation_title_regular_3,
@@ -34,7 +35,8 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
       <SquiggleUnderline src={icons.SQUIGGLE_UNDERLINE} />
       <PageDescription
         description={contactPageDescription}
-        arrowText="LET'S CONNECT"
+        arrowText="EXPLORE THE ARCHIVE"
+        img={contactImageTop.url}
       />
       <BoxLink boxLinkData={boxLinkData} />
       <ContactConfirmation contactConfirmationData={contactConfirmationData} />

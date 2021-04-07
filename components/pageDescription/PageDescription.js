@@ -5,10 +5,11 @@ import {
   UnfilledSparkArrow,
   ArrowText,
   ArrowContainer,
+  Img,
 } from './PageDescription.styles';
 import { icons } from '../../style/icons';
 
-export default function PageDescription({ description, arrowText }) {
+export default function PageDescription({ description, arrowText, img }) {
   return (
     <>
       <PageDescriptionContainer>
@@ -18,6 +19,7 @@ export default function PageDescription({ description, arrowText }) {
         </ArrowContainer>
         <Description>{getString(description)}</Description>
       </PageDescriptionContainer>
+      <Img src={img} />
     </>
   );
 }

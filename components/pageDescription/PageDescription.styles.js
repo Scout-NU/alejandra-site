@@ -9,7 +9,8 @@ const PageDescriptionContainer = styled.div`
     margin: 0 0 0 17em;
   }
   @media ${min.tablet} {
-    margin: 0 0 0 15em;
+    padding: 2em 0 0 0;
+    margin: 0 0 0 8em;
   }
   @media ${min.desktop} {
     padding: 3em 0 0 0;
@@ -25,7 +26,7 @@ const Description = styled(P)`
   }
   @media ${min.tablet} {
     margin: 0 0 0 4em;
-    width: 19em;
+    width: 15em;
     line-height: 1.8em;
   }
   @media ${min.desktop} {
@@ -36,7 +37,15 @@ const Description = styled(P)`
 `;
 
 const UnfilledSparkArrow = styled.img`
-  height: 12.5em;
+  @media ${min.mobile} {
+    height: 12.5em;
+  }
+  @media ${min.tablet} {
+    height: 18em;
+  }
+  @media ${min.desktop} {
+    height: 12.5em;
+  }
 `;
 
 const ArrowText = styled(P)`
@@ -46,13 +55,25 @@ const ArrowText = styled(P)`
   @media ${min.mobile} {
     padding: 0.3em 0 0 6.3em;
   }
+  @media ${min.tablet} {
+    padding: 0.3em 0 0 1em;
+  }
   @media ${min.desktop} {
     padding: 0.3em 0 0 6.3em;
   }
 `;
 
 const ArrowContainer = styled.div`
-  position: absolute; ;
+  position: absolute;
+`;
+
+const Img = styled.img`
+  opacity: 10%;
+  top: 5em;
+  right: 0;
+  width: 38.5em;
+  height: 40em;
+  position: absolute;
 `;
 
 export {
@@ -61,4 +82,5 @@ export {
   UnfilledSparkArrow,
   ArrowText,
   ArrowContainer,
+  Img,
 };
