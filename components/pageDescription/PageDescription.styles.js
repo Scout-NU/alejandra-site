@@ -69,11 +69,20 @@ const ArrowContainer = styled.div`
 
 const Img = styled.img`
   opacity: 10%;
-  top: 5em;
-  right: 0;
-  width: 38.5em;
-  height: 40em;
+  object-fit: cover;
   position: absolute;
+  @media ${min.tablet} {
+    top: 7em;
+    right: 0;
+    width: 38.5em;
+    height: 38em;
+}
+  @media ${min.desktop} {
+    top: 5em;
+    right: 0;
+    width: 38.5em;
+    height: 38em;
+}
 `;
 
 export {

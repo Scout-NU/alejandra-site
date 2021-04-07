@@ -16,7 +16,7 @@ export default function ContactPage({
 }) {
   return (
     <>
-      <Navigation navigationData={navigationData} />
+      {/* <Navigation navigationData={navigationData} /> */}
       <Contact contactPageData={contactPageData} boxLinkData={boxLink1Data} />
       <Footer footerData={footerData} />
     </>
