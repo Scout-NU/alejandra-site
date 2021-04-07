@@ -34,7 +34,7 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
       <SquiggleUnderline src={icons.SQUIGGLE_UNDERLINE} />
       <PageDescription
         description={contactPageDescription}
-        arrowText="Let's Connect"
+        arrowText="LET'S CONNECT"
       />
       <BoxLink boxLinkData={boxLinkData} />
       <ContactConfirmation contactConfirmationData={contactConfirmationData} />
