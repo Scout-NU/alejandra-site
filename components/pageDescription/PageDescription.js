@@ -12,11 +12,11 @@ export default function PageDescription({ description, arrowText }) {
   return (
     <>
       <PageDescriptionContainer>
-        <Description>{getString(description)}</Description>
         <ArrowContainer>
           <UnfilledSparkArrow src={icons.LONG_UNFILLED_SPARK_ARROW} />
           <ArrowText>{arrowText}</ArrowText>
         </ArrowContainer>
+        <Description>{getString(description)}</Description>
       </PageDescriptionContainer>
     </>
   );
