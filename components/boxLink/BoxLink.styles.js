@@ -1,12 +1,26 @@
 import styled from 'styled-components';
+import { P } from '../../style/typography';
+import { colors } from '../../style/colors';
+import { fontWeights } from '../../style/typography';
 
 const BoxLinkContainer = styled.div`
-  padding: 0 0 0 40em;
+  padding: 0 0 0 48em;
 `;
 
 const Ellipse = styled.img`
-  height: 55%;
-  width: 55%;
+  height: 78%;
+  width: 78%;
 `;
 
-export { BoxLinkContainer, Ellipse };
+const Title = styled(P)`
+  color: ${colors.BROWN};
+  font-weight: ${fontWeights.medium};
+  letter-spacing: .1em;
+`; 
+
+
+const Description = styled(P)`
+  width: 14em;
+`; 
+
+export { BoxLinkContainer, Ellipse, Title, Description };

@@ -16,4 +16,23 @@ const SquiggleUnderline = styled.img`
   }
 `;
 
-export { SquiggleUnderline };
+const BottomImageContainer = styled.div` 
+
+`;
+
+const BottomImage = styled.img` 
+width: 100%; 
+opacity: 10%;
+object-fit: cover;
+@media ${min.mobile} {
+  height: 100em;
+}
+@media ${min.tablet} {
+  height: 32em;
+}
+@media ${min.desktop} {
+  height: 28em;
+}
+`;
+
+export { SquiggleUnderline, BottomImageContainer, BottomImage };

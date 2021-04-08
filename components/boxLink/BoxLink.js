@@ -1,6 +1,6 @@
 import { getString } from '../../lib/richText';
 import { H3, P } from '../../style/typography';
-import { BoxLinkContainer, Ellipse } from './BoxLink.styles';
+import { BoxLinkContainer, Ellipse, Title, Description } from './BoxLink.styles';
 import { icons } from '../../style/icons';
 export default function BoxLink({ boxLinkData }) {
   const {
@@ -12,8 +12,8 @@ export default function BoxLink({ boxLinkData }) {
     <>
       <BoxLinkContainer>
         <Ellipse src={icons.DOUBBLE_ELLIPSES} />
-        <H3>{getString(boxLinkTitle)}</H3>
-        <P>{getString(boxLinkDescription)}</P>
+        <Title>{getString(boxLinkTitle)}</Title>
+        <Description>{getString(boxLinkDescription)}</Description>
       </BoxLinkContainer>
     </>
   );

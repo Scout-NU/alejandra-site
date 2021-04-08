@@ -4,13 +4,14 @@ import ContactConfirmation from '../contactConfirmation/ContactConfirmation';
 import PageDescription from '../pageDescription/PageDescription';
 import BoxLink from '../boxLink/BoxLink';
 import { icons } from '../../style/icons';
-import { SquiggleUnderline } from './Contact.styles';
+import { SquiggleUnderline, BottomImageContainer, BottomImage } from './Contact.styles';
 export default function ContactPage({ contactPageData, boxLinkData }) {
   const {
     contact_page_title_regular: contactPageTitleRegular,
     contact_page_title_italic: contactPageTitleItalic,
     contact_page_description: contactPageDescription,
     contact_image_top: contactImageTop,
+    contact_image_bottom: contactImageBottom,
     contact_confirmation_title_regular_1,
     contact_confirmation_title_italic_2,
     contact_confirmation_title_regular_3,
@@ -38,6 +39,9 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
         arrowText="LET'S CONNECT"
         img={contactImageTop.url}
       />
+      <BottomImageContainer>
+        <BottomImage src={contactImageBottom.url} />
+      </BottomImageContainer>
       <BoxLink boxLinkData={boxLinkData} />
       <ContactConfirmation contactConfirmationData={contactConfirmationData} />
     </>
