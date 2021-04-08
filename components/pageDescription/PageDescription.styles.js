@@ -16,11 +16,12 @@ const PageDescriptionContainer = styled.div`
   }
   @media ${min.desktop} {
     padding: 3em 0 0 0;
-    margin: 0 0 0 13em;
+    margin: 0 0 0 11em;
   }
 `;
 
 const DescriptionContainer = styled.div`
+  margin: 0 0 0 2em;
 
 `;
 
@@ -45,20 +46,26 @@ const Description = styled(P)`
 const UnfilledSparkArrow = styled.img` 
 position: absolute;
 top: 2em;
-height: 12.5em;
+right: 6em;
+height: 15em;
 transform: rotate(90deg);
 z-index: 1;
-margin: 0 0 0 13em;
-
 `;
 
 const ArrowText = styled(P)` 
 position: absolute;
 z-index: 2;
-padding-top: 6.5em;
+right: 0;
+padding-top: 7.8em;
 width: 20em;
 text-align: right;
+color: ${colors.BROWN};
+`;
 
+const ArrowContainer = styled.div`
+  position: absolute;
+  transform: rotate(270deg);
+  left: -8em;
 `;
 // const UnfilledSparkArrow = styled.img`
 //   @media ${min.mobile} {
@@ -87,11 +94,7 @@ text-align: right;
 //   }
 // `;
 
-const ArrowContainer = styled.div`
-  position: relative;
-  
 
-`;
 
 const Img = styled.img`
   opacity: 10%;
