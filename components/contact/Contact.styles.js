@@ -3,8 +3,8 @@ import { min } from '../../lib/responsive';
 
 const SquiggleUnderline = styled.img`
   @media ${min.mobile} {
-    width: 42em;
-    margin: 0 0 0 5.6em;
+    width: 45em;
+    margin: 0 0 0 8em;
   }
   @media ${min.tablet} {
     width: 26em;

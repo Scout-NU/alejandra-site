@@ -2,11 +2,13 @@ import { P } from '../../style/typography';
 import styled from 'styled-components';
 import { colors } from '../../style/colors';
 import { min } from '../../lib/responsive';
+
 const PageDescriptionContainer = styled.div`
   display: flex;
   position: relative;
   @media ${min.mobile} {
-    margin: 0 0 0 17em;
+    padding: 4em 0 0 0;
+    margin: 0 0 0 10em;
   }
   @media ${min.tablet} {
     padding: 2em 0 0 0;
@@ -18,10 +20,14 @@ const PageDescriptionContainer = styled.div`
   }
 `;
 
+const DescriptionContainer = styled.div`
+
+`;
+
 const Description = styled(P)`
   @media ${min.mobile} {
-    margin: 0 0 0 2em;
-    width: 19em;
+    margin: 0 2em 0 2em;
+    width: 18em;
     line-height: 1.8em;
   }
   @media ${min.tablet} {
@@ -93,6 +99,7 @@ const Img = styled.img`
 
 export {
   PageDescriptionContainer,
+  DescriptionContainer,
   Description,
   UnfilledSparkArrow,
   ArrowText,
