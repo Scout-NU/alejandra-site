@@ -32,7 +32,7 @@ const Description = styled(P)`
     line-height: 1.8em;
   }
   @media ${min.tablet} {
-    margin: 0 0 0 4em;
+    margin: 0 0 0 2em;
     width: 15em;
     line-height: 1.8em;
   }
