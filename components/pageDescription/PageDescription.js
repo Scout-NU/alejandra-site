@@ -14,15 +14,17 @@ export default function PageDescription({ description, arrowText, img }) {
     return (
         <>
             <PageDescriptionContainer>
-                <ArrowContainer>
-                    <UnfilledSparkArrow src={icons.LONG_UNFILLED_SPARK_ARROW} />
-                    <ArrowText>{arrowText}</ArrowText>
-                </ArrowContainer>
+  
                 <DescriptionContainer>
                     <Description>{getString(description)}</Description>
                 </DescriptionContainer>
             </PageDescriptionContainer>
             <Img src={img} />
+            <ArrowContainer>
+                    <UnfilledSparkArrow src={icons.LONG_UNFILLED_SPARK_ARROW} />
+                    <ArrowText>{arrowText}</ArrowText>
+                </ArrowContainer>
+
         </>
     );
 }

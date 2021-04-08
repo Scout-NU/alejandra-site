@@ -36,7 +36,7 @@ export default function ContactPage({ contactPageData, boxLinkData }) {
       <SquiggleUnderline src={icons.SQUIGGLE_UNDERLINE} />
       <PageDescription
         description={contactPageDescription}
-        arrowText="LET'S CONNECT"
+        arrowText="EXPLORE THE ARCHIVE"
         img={contactImageTop.url}
       />
       <ImageBoxLinkContainer>

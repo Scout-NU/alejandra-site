@@ -42,35 +42,55 @@ const Description = styled(P)`
   }
 `;
 
-const UnfilledSparkArrow = styled.img`
-  @media ${min.mobile} {
-    height: 12.5em;
-  }
-  @media ${min.tablet} {
-    height: 18em;
-  }
-  @media ${min.desktop} {
-    height: 12.5em;
-  }
+const UnfilledSparkArrow = styled.img` 
+position: absolute;
+top: 2em;
+height: 12.5em;
+transform: rotate(90deg);
+z-index: 1;
+margin: 0 0 0 13em;
+
 `;
 
-const ArrowText = styled(P)`
-  color: ${colors.BROWN};
-  transform: rotate(270deg);
-  transform-origin: top left;
-  @media ${min.mobile} {
-    padding: 0.3em 0 0 6.3em;
-  }
-  @media ${min.tablet} {
-    padding: 0.3em 0 0 1em;
-  }
-  @media ${min.desktop} {
-    padding: 0.3em 0 0 6.3em;
-  }
+const ArrowText = styled(P)` 
+position: absolute;
+z-index: 2;
+padding-top: 6.5em;
+width: 20em;
+text-align: right;
+
 `;
+// const UnfilledSparkArrow = styled.img`
+//   @media ${min.mobile} {
+//     height: 12.5em;
+//   }
+//   @media ${min.tablet} {
+//     height: 18em;
+//   }
+//   @media ${min.desktop} {
+//     height: 12.5em;
+//   }
+// `;
+
+// const ArrowText = styled(P)`
+//   color: ${colors.BROWN};
+//   transform: rotate(270deg);
+//   transform-origin: top left;
+//   @media ${min.mobile} {
+//     padding: 0.3em 0 0 6.3em;
+//   }
+//   @media ${min.tablet} {
+//     padding: 0.3em 0 0 1em;
+//   }
+//   @media ${min.desktop} {
+//     padding: 0.3em 0 0 6.3em;
+//   }
+// `;
 
 const ArrowContainer = styled.div`
-  position: absolute;
+  position: relative;
+  
+
 `;
 
 const Img = styled.img`
