@@ -18,7 +18,7 @@ export default function ContactPage({
     <>
       {/* <Navigation navigationData={navigationData} /> */}
       <Contact contactPageData={contactPageData} boxLinkData={boxLink1Data} />
-      <Footer footerData={footerData} />
+      {/* <Footer footerData={footerData} /> */}
     </>
   );
 }

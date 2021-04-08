@@ -17,7 +17,16 @@ const SquiggleUnderline = styled.img`
 `;
 
 const BottomImageContainer = styled.div` 
+  position: absolute;
+`;
 
+const ImageBoxLinkContainer = styled.div` 
+  position: relative;
+`;
+
+const BoxLinkContainer = styled.div` 
+  position: absolute;
+  margin: 1em 0 0 0;
 `;
 
 const BottomImage = styled.img` 
@@ -35,4 +44,4 @@ object-fit: cover;
 }
 `;
 
-export { SquiggleUnderline, BottomImageContainer, BottomImage };
+export { SquiggleUnderline, BottomImageContainer, BottomImage, ImageBoxLinkContainer, BoxLinkContainer };
