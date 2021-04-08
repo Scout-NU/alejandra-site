@@ -3,21 +3,16 @@ import {
     PageDescriptionContainer,
     DescriptionContainer,
     Description,
-    UnfilledSparkArrow,
-    ArrowText,
-    ArrowContainer,
     Img,
 } from './PageDescription.styles';
+import LongSparkArrow from '../longSparkArrow/LongSparkArrow';
 import { icons } from '../../style/icons';
 
 export default function PageDescription({ description, arrowText, img }) {
     return (
         <>
             <PageDescriptionContainer>
-                <ArrowContainer>
-                    <UnfilledSparkArrow src={icons.LONG_UNFILLED_SPARK_ARROW} />
-                    <ArrowText>{arrowText}</ArrowText>
-                </ArrowContainer>
+                <LongSparkArrow arrowText={arrowText}/>
                 <DescriptionContainer>
                     <Description>{getString(description)}</Description>
                 </DescriptionContainer>
