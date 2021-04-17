@@ -27,6 +27,7 @@ export async function getStaticProps() {
   const boxLink1Data = await getBoxLink(contactPageData.box_link_1.id);
   const footerData = await getFooter();
   const navigationData = await getNavigation();
+
   return {
     props: {
       contactPageData,
