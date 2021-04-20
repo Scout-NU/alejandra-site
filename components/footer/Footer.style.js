@@ -5,7 +5,7 @@ import { max } from '../../lib/responsive';
 const FooterContainer = styled.div`
   background-color: ${colors.OLIVE};
   width: 100%;
-  height: 17em;
+  height: 15em;
   margin-top: 10em;
   bottom: 0;
 
@@ -17,7 +17,8 @@ const FooterContainer = styled.div`
   }
 
   @media only screen and ${max.tabletSm} {
-    height: 10em;
+    height: 11em;
+    // flex-direction: column;
   }
 `;
 
@@ -34,7 +35,7 @@ const EmailWrapper = styled.div`
 
   @media only screen and ${max.tabletSm} {
     width: 60%;
-    padding-left: clamp(1em, 5vw, 3em);
+    padding-left: clamp(1em, 3vw, 3em);
   }
 `;
 
