@@ -1,8 +1,15 @@
 import { getString } from '../../lib/richText';
-import { FooterContainer, EmailWrapper, SocialsWrapper } from './Footer.style';
+import {
+  FooterContainer,
+  FooterSocialsContainer,
+  EmailWrapper,
+  SocialsWrapper,
+} from './Footer.style';
 import FooterLink from './footerLink/FooterLink';
+import ImageBoxLink from '../imageBoxLink/ImageBoxLink';
+// import { Overlay } from '../contactPage/ContactPage.styles';
 
-export default function Footer({ footerData }) {
+export default function Footer({ footerData, boxLinkData }) {
   const {
     contact_email: contactEmail,
     // contact_information_description: contactInformationDescription,
@@ -14,16 +21,24 @@ export default function Footer({ footerData }) {
   const mailToLink = 'mailto:' + getString(contactEmail);
 
   return (
-    <FooterContainer>
-      <EmailWrapper>
-        <FooterLink label={getString(contactEmail)} link={mailToLink} />
-      </EmailWrapper>
-      <SocialsWrapper>
-        <FooterLink label="Instagram" link={instagramLink} />
-        <FooterLink label="Tiktok" link={tiktokLink} />
-        <FooterLink label="Facebook" link="#" />
-        <FooterLink label="Twitter" link="#" />
-      </SocialsWrapper>
+    // <div style={{ overflow: 'hidden' }}>
+    <FooterContainer topMargin={boxLinkData ? false : true}>
+      {boxLinkData && (
+        <div>
+          <ImageBoxLink boxLinkData={boxLinkData} />
+        </div>
+      )}
+      <FooterSocialsContainer>
+        <EmailWrapper>
+          <FooterLink label={getString(contactEmail)} link={mailToLink} />
+        </EmailWrapper>
+        <SocialsWrapper>
+          <FooterLink label="Instagram" link={instagramLink} />
+          <FooterLink label="Tiktok" link={tiktokLink} />
+          <FooterLink label="Facebook" link="#" />
+          <FooterLink label="Twitter" link="#" />
+        </SocialsWrapper>
+      </FooterSocialsContainer>
     </FooterContainer>
   );
 }

@@ -18,7 +18,7 @@ import {
   SquiggleUnderline,
   BackToStartButtonContainer,
 } from './ContactPage.styles';
-import ImageBoxLink from '../imageBoxLink/ImageBoxLink';
+// import ImageBoxLink from '../imageBoxLink/ImageBoxLink';
 
 export default function ContactPage({
   contactPageData,
@@ -54,6 +54,11 @@ export default function ContactPage({
     setIsOpen(!isOpen);
   };
 
+  const footerBoxLinkData = {
+    img: contactImageBottom,
+    data: boxLinkData,
+  };
+
   return (
     <>
       <Navigation navigationData={navigationData} />
@@ -76,7 +81,7 @@ export default function ContactPage({
         <FormContainer>
           <ContactForm togglePopup={togglePopup} />
         </FormContainer>
-        <ImageBoxLink img={contactImageBottom} boxLinkData={boxLinkData} />
+        {/* <ImageBoxLink img={contactImageBottom} boxLinkData={boxLinkData} /> */}
         {isOpen && (
           <ConfirmationPopup
             confirmationData={contactConfirmationData}
@@ -90,7 +95,7 @@ export default function ContactPage({
         </MediaQuery>
       </PageContainer>
       <Overlay showOverlay={isOpen} />
-      <Footer footerData={footerData} />
+      <Footer footerData={footerData} boxLinkData={footerBoxLinkData} />
     </>
   );
 }

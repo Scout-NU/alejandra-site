@@ -3,11 +3,26 @@ import { colors } from '../../style/colors';
 import { max } from '../../lib/responsive';
 
 const FooterContainer = styled.div`
+  // position: relative;
+  width: 100%;
+  // height: 15em;
+  margin-top: ${(props) => (props.topMargin ? '10em' : '0')};
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  flex: 100%;
+  flex-direction: column;
+
+  // border: 2px solid red;
+`;
+
+const FooterSocialsContainer = styled.div`
   background-color: ${colors.OLIVE};
   width: 100%;
-  height: 15em;
-  margin-top: 10em;
-  bottom: 0;
+  min-height: 15em;
+  // margin-top: 10em;
+  // bottom: 0;
 
   display: flex;
   flex: 100%;
@@ -49,4 +64,9 @@ const SocialsWrapper = styled.div`
   }
 `;
 
-export { FooterContainer, EmailWrapper, SocialsWrapper };
+export {
+  FooterContainer,
+  FooterSocialsContainer,
+  EmailWrapper,
+  SocialsWrapper,
+};

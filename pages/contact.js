@@ -13,17 +13,12 @@ export default function Contact({
   boxLink1Data,
 }) {
   return (
-    <>
-      <ContactPage
-        contactPageData={contactPageData}
-        boxLinkData={boxLink1Data}
-        navigationData={navigationData}
-        footerData={footerData}
-      />
-      <div style={{ overflow: 'hidden' }}>
-        <Footer footerData={footerData} />
-      </div>
-    </>
+    <ContactPage
+      contactPageData={contactPageData}
+      boxLinkData={boxLink1Data}
+      navigationData={navigationData}
+      footerData={footerData}
+    />
   );
 }
 
