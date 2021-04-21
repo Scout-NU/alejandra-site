@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../navigation/Navigation';
-// import Footer from '../footer/Footer';
+import Footer from '../footer/Footer';
 import ArchiveStoryPreview from './archiveStoryPreview/ArchiveStoryPreview';
 import ArchivePagination from './archivePagination/ArchivePagination';
 import ArchiveSorting from './archiveSorting/ArchiveSorting';
@@ -96,7 +96,7 @@ export default function StoryArchivePage({
           />
         </FooterPaginationWrapper>
       </ArchiveContainer>
-      {/* <Footer footerData={footerData} /> */}
+      <Footer footerData={footerData} />
     </>
   );
 }
