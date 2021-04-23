@@ -1,5 +1,5 @@
-import { P } from '../../../../style/typography';
 import { getString } from '../../../../lib/richText';
+import { P } from '../../../../style/typography';
 
 export default function NewsletterConfirmationModal({
   newsletterConfirmationData,
@@ -10,6 +10,10 @@ export default function NewsletterConfirmationModal({
     newsletter_confirmation_description: description,
     newsletter_confirmation_image: image,
   } = newsletterConfirmationData;
+
+  console.log('In conf');
+  console.log(image);
+  console.log(newsletterConfirmationData);
   return (
     <>
       <P>{getString(title1)}</P>

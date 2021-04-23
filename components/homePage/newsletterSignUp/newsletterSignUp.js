@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { getString } from '../../../lib/richText';
 import { colors } from '../../../style/colors';
-import TextInputField from '../../textInputField/TextInputField';
 import ArchModal from '../../archModal/ArchModal';
+import TextInputField from '../../textInputField/TextInputField';
 import NewsletterConfirmationModal from './newsletterConfirmationModal/NewsletterConfirmationModal';
 import {
   ContentWrapper,
+  NewsletterDescriptionText,
   NewsletterSignUpTextInput,
   NewsletterSignUpTitle,
-  NewsletterDescriptionText,
   NewsletterSignUpWrapper,
   Overlay,
   PrivacyPolicyLinkText,
@@ -28,6 +28,9 @@ export default function NewsletterSignUp({
   const onSubmitClick = () => {
     setIsConfirmationOpen(true);
   };
+
+  console.log('in newsletter');
+  console.log(newsletterConfirmationData);
 
   return (
     <>

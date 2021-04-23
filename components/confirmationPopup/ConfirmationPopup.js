@@ -24,7 +24,7 @@ export default function ConfirmationPopup({
     confirmationTitleItalic,
     confirmationDescription,
     confirmationImage,
-  } = confirmationData;
+  } = props.newsletterConfirmationData;
 
   let firstName = '';
   if (name != undefined) {
