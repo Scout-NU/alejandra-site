@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { getString } from '../../../lib/richText';
 import { colors } from '../../../style/colors';
-import TextInputField from '../../textInputField/TextInputField';
 import ArchModal from '../../archModal/ArchModal';
+import ConfirmationPopup from '../../confirmationPopup/ConfirmationPopup';
+import TextInputField from '../../textInputField/TextInputField';
 import {
   ContentWrapper,
+  NewsletterDescriptionText,
   NewsletterSignUpTextInput,
   NewsletterSignUpTitle,
-  NewsletterDescriptionText,
   NewsletterSignUpWrapper,
   Overlay,
   PrivacyPolicyLinkText,
   SubmitButton,
 } from './NewsletterSignUp.styles';
-import ConfirmationPopup from '../../confirmationPopup/ConfirmationPopup';
 
 export default function NewsletterSignUp({
   description,
@@ -28,6 +28,9 @@ export default function NewsletterSignUp({
   const onSubmitClick = () => {
     setIsConfirmationOpen(true);
   };
+
+  console.log('newsletters');
+  console.log(newsletterConfirmationData);
 
   return (
     <>
@@ -52,11 +55,7 @@ export default function NewsletterSignUp({
           >
             {getString(privacyPolicyLinkTitle)}
           </PrivacyPolicyLinkText>
-          <SubmitButton
-            color={colors.WHITE}
-            type="submit"
-            onClick={onSubmitClick}
-          >
+          <SubmitButton color={colors.WHITE} onClick={onSubmitClick}>
             SUBMIT
           </SubmitButton>
         </ContentWrapper>
