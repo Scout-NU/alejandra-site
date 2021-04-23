@@ -7,7 +7,7 @@ import {
   FeaturedStoryPreviews,
   HomePageContentWrapper,
 } from './HomePage.styles';
-import NewsletterSignUp from './newsletterSignUp/NewsletterSignUp';
+import NewsletterSignup from './newsletterSignUp/NewsletterSignUp';
 
 const PREVIEW_CHANGE_IN_MILLISECONDS = 3000;
 
@@ -82,7 +82,7 @@ export default function HomePage({
             );
           })}
         </FeaturedStoryPreviews>
-        <NewsletterSignUp
+        <NewsletterSignup
           description={newsletterDescription}
           newsletterConfirmationData={newsletterConfirmationData}
           privacyPolicyLinkTitle={privacyPolicyLinkTitle}
