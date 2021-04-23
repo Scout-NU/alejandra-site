@@ -28,6 +28,7 @@ export default function NewsletterSignUp({
   const onSubmitClick = () => {
     setIsConfirmationOpen(true);
   };
+  console.log('HELLO?');
 
   console.log('newsletters');
   console.log(newsletterConfirmationData);
