@@ -5,14 +5,13 @@ export default function NewsletterConfirmationModal({
   newsletterConfirmationData,
 }) {
   const {
-    newsletter_confirmation_title_1: title1,
-    newsletter_confirmation_title_2: title2,
-    newsletter_confirmation_description: description,
-    newsletter_confirmation_image: image,
+    confirmationTitleRegular: title1,
+    confirmationTitleItalic: title2,
+    confirmationDescription: description,
+    confirmationImage: image,
   } = newsletterConfirmationData;
 
   console.log('In conf');
-  console.log(image);
   console.log(newsletterConfirmationData);
   return (
     <>
