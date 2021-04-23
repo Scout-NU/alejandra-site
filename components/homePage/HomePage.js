@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Navigation from '../navigation/Navigation';
 import Footer from '../footer/Footer';
-import {
-  HomePageContentWrapper,
-  FeaturedStoryPreviews,
-} from './HomePage.styles';
+import Navigation from '../navigation/Navigation';
 import CurrentFeaturedStory from './currentFeaturedStory/CurrentFeaturedStory';
 import FeaturedStoryPreview from './featuredStoryPreview/FeaturedStoryPreview';
+import {
+  FeaturedStoryPreviews,
+  HomePageContentWrapper,
+} from './HomePage.styles';
 import NewsletterSignUp from './newsletterSignUp/NewsletterSignUp';
 
 const PREVIEW_CHANGE_IN_MILLISECONDS = 3000;
@@ -35,6 +35,10 @@ export default function HomePage({
     confirmationDescription,
     confirmationImage,
   };
+
+  console.log(newsletterDescription);
+  console.log(newsletterConfirmationData);
+  console.log(privacyPolicyLinkTitle);
 
   const getSignature = (authorInfoID) => authorSignatures[String(authorInfoID)];
 
