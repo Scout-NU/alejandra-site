@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { getString } from '../../../lib/richText';
 import { colors } from '../../../style/colors';
-import ArchModal from '../../archModal/ArchModal';
-import ConfirmationPopup from '../../confirmationPopup/ConfirmationPopup';
 import TextInputField from '../../textInputField/TextInputField';
+import ArchModal from '../../archModal/ArchModal';
+import NewsletterConfirmationModal from './newsletterConfirmationModal/NewsletterConfirmationModal';
 import {
   ContentWrapper,
-  NewsletterDescriptionText,
   NewsletterSignUpTextInput,
   NewsletterSignUpTitle,
+  NewsletterDescriptionText,
   NewsletterSignUpWrapper,
   Overlay,
   PrivacyPolicyLinkText,
@@ -24,14 +24,10 @@ export default function NewsletterSignUp({
 }) {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
-  const [name, updateName] = useState('');
+
   const onSubmitClick = () => {
     setIsConfirmationOpen(true);
   };
-
-  console.log(newsletterDescription);
-  console.log(newsletterConfirmationData);
-  console.log(privacyPolicyLinkTitle);
 
   return (
     <>
@@ -41,12 +37,7 @@ export default function NewsletterSignUp({
           <NewsletterDescriptionText>
             {getString(description)}
           </NewsletterDescriptionText>
-          <NewsletterSignUpTextInput
-            id="name"
-            label="Name"
-            fullWidth
-            onChange={(e) => updateName(e)}
-          />
+          <NewsletterSignUpTextInput id="name" label="Name" fullWidth />
           <TextInputField id="email" label="Email" fullWidth />
           <PrivacyPolicyLinkText
             onClick={() => {
@@ -74,11 +65,8 @@ export default function NewsletterSignUp({
           />
         )}
         {isConfirmationOpen && (
-          <ConfirmationPopup
-            confirmationData={newsletterConfirmationData}
-            togglePopup={setIsConfirmationOpen}
-            name={name}
-            page="home"
+          <NewsletterConfirmationModal
+            newsletterConfirmationData={newsletterConfirmationData}
           />
         )}
       </NewsletterSignUpWrapper>

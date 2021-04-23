@@ -1,17 +1,17 @@
 import { getString } from '../../lib/richText';
+import { icons } from '../../style/icons';
 import {
-  PopupBox,
-  Box,
-  TextContent,
-  ImgBackground,
-  Img,
-  CloseIcon,
-  H2Styled,
-  PStyled,
   Arch,
   ArchImgContainer,
+  Box,
+  CloseIcon,
+  H2Styled,
+  Img,
+  ImgBackground,
+  PopupBox,
+  PStyled,
+  TextContent,
 } from './ConfirmationPopup.styles';
-import { icons } from '../../style/icons';
 
 export default function ConfirmationPopup({
   confirmationData,
@@ -33,6 +33,9 @@ export default function ConfirmationPopup({
   if (firstName.length > 12) {
     firstName = firstName.slice(0, 12) + '...';
   }
+
+  console.log('in confirmation');
+  console.log(confirmationData);
 
   return (
     <>
