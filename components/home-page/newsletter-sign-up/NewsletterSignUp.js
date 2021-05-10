@@ -11,8 +11,8 @@ import {
   NewsletterDescriptionText,
   NewsletterSignUpWrapper,
   PrivacyPolicyLinkText,
-  SubmitButton,
 } from './NewsletterSignUp.styles';
+import { SubmitButton } from '../../base-components/BaseComponents';
 import ArchModal from '../../arch-modal/ArchModal';
 import ConfirmationPopup from '../../confirmation-popup/ConfirmationPopup';
 

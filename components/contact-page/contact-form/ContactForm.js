@@ -1,6 +1,5 @@
 import TextInputField from '../../text-input-field/TextInputField';
 import TextInputBox from '../../text-input-box/TextInputBox';
-import { SubmitButton } from '../../home-page/newsletter-sign-up/NewsletterSignUp.styles';
 import {
   ContactFormContainer,
   InputBoxWrapper,
@@ -10,6 +9,7 @@ import { colors } from '../../../style/colors';
 import React, { useState } from 'react';
 import { emailEndpoint, axiosConfig, proxyurl } from '../../../lib/utils';
 import { fieldNames } from '../../../lib/utils';
+import { SubmitButton } from '../../base-components/BaseComponents';
 
 const axios = require('axios');
 

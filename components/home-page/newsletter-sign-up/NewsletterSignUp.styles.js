@@ -4,7 +4,6 @@ import { H2, P } from '../../../style/typography';
 import { colors } from '../../../style/colors';
 import { icons } from '../../../style/icons';
 import TextInputField from '../../text-input-field/TextInputField';
-import { HoverAnimationButton } from '../../animation-base-components/AnimationBaseComponents';
 
 export const NewsletterSignUpWrapper = styled.div`
   display: flex;
@@ -52,25 +51,4 @@ export const NewsletterSignUpTextInput = styled(TextInputField)`
 
 export const PrivacyPolicyLinkText = styled.div`
   margin: -5px 0;
-`;
-
-export const SubmitButton = styled(P).attrs({
-  as: HoverAnimationButton,
-})`
-  color: ${colors.WHITE};
-  background-color: ${colors.OLIVE};
-  border: none;
-  width: 150px;
-  height: 48px;
-  margin-top: 10px;
-  align-self: flex-end;
-  font-weight: normal;
-  letter-spacing: 4px;
-  cursor: pointer;
-
-  @media ${max.tabletSm} {
-    align-self: center;
-    width: 50%;
-    letter-spacing: 2px;
-  }
 `;
