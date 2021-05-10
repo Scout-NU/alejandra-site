@@ -1,11 +1,12 @@
 import TextInputField from '../../text-input-field/TextInputField';
 import TextInputBox from '../../text-input-box/TextInputBox';
-import SquareButton from '../../square-button/SquareButton';
+import { SubmitButton } from '../../home-page/newsletter-sign-up/NewsletterSignUp.styles';
 import {
   ContactFormContainer,
   InputBoxWrapper,
   ButtonWrapper,
 } from './ContactForm.styles';
+import { colors } from '../../../style/colors';
 import React, { useState } from 'react';
 import { emailEndpoint, axiosConfig, proxyurl } from '../../../lib/utils';
 import { fieldNames } from '../../../lib/utils';
@@ -80,18 +81,19 @@ export default function ContactForm({ togglePopup }) {
         />
       </InputBoxWrapper>
       <ButtonWrapper>
-        <SquareButton
+        <SubmitButton
           aria-label="Submission Button"
-          buttonText="SUBMIT"
+          color={colors.WHITE}
+          type="submit"
           onClick={() => {
             if (submitRequest()) {
               document.body.style.overflow = 'hidden';
-              document.getElementById('area').value = '';
-              setFields({});
               togglePopup();
             }
           }}
-        />
+        >
+          SUBMIT
+        </SubmitButton>
       </ButtonWrapper>
     </ContactFormContainer>
   );
