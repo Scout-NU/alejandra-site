@@ -105,12 +105,12 @@ const StarLabelContainer = styled.div`
   margin: 0 0 0.3em 0;
 `;
 
-const SquareButtonWrapper = styled.div`
+const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: -4em;
   @media ${min.tablet} {
     float: right;
-    margin: -0.3em 0 0 0;
   }
 `;
 
@@ -142,7 +142,7 @@ export {
   ClearSignatureWrapper,
   StarLabelContainer,
   TextLabel,
-  SquareButtonWrapper,
+  ButtonWrapper,
   SocialInfoTextWrapper,
   ErrorText,
   ScrollToSubmissionForm,

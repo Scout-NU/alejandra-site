@@ -1,6 +1,6 @@
 import TextInputField from '../../text-input-field/TextInputField';
 import TextInputBox from '../../text-input-box/TextInputBox';
-import SquareButton from '../../square-button/SquareButton';
+import { colors } from '../../../style/colors';
 import { H4, InputInfoText } from '../../../style/typography';
 import { getString } from '../../../lib/richText';
 import {
@@ -18,10 +18,11 @@ import {
   StarLabelContainer,
   TextLabel,
   SocialInfoTextWrapper,
-  SquareButtonWrapper,
+  ButtonWrapper,
   ErrorText,
   ScrollToSubmissionForm,
 } from './StoryInquiryForm.styles';
+import { SubmitButton } from '../../base-components/BaseComponents';
 import { fieldNames } from '../../../lib/utils';
 import { RedStar } from '../../base-components/BaseComponents';
 import SignatureCanvas from 'react-signature-canvas';
@@ -379,21 +380,22 @@ export default function StoryInquiryForm({
             })}
           </InputFieldWrapper>
         </ResourceLinksContainer>
-        <SquareButtonWrapper>
-          <SquareButton
-            buttonText="SUBMIT MY STORY"
+        <ButtonWrapper>
+          <SubmitButton
+            aria-label="Submission Button"
+            color={colors.WHITE}
+            type="submit"
             long
             onClick={() => {
               if (submitRequest()) {
                 document.body.style.overflow = 'hidden';
-                document.querySelector('#area').value = '';
-                setFields({});
-                clear();
-                setIsConfirmationPopupOpen(true);
+                togglePopup();
               }
             }}
-          />
-        </SquareButtonWrapper>
+          >
+            SUBMIT MY STORY
+        </SubmitButton>
+        </ButtonWrapper>
         {isConfirmationPopupOpen && (
           <ConfirmationPopup
             confirmationData={storySubmissionConfirmationData}
@@ -435,9 +437,8 @@ export default function StoryInquiryForm({
     Signature: ${trimmedDataUrl}%0A
     `;
     if (isValidSubmission()) {
-      const request = `${emailEndpoint}?name=${fields['name']}&email=${
-        fields[fieldNames.EMAIL]
-      }&subject=${subject}&body=${body}`;
+      const request = `${emailEndpoint}?name=${fields['name']}&email=${fields[fieldNames.EMAIL]
+        }&subject=${subject}&body=${body}`;
       axios
         .post(proxyurl + request, axiosConfig)
         .then((response) => {

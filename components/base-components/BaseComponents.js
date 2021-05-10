@@ -31,17 +31,16 @@ export const SubmitButton = styled(P).attrs({
   color: ${colors.WHITE};
   background-color: ${colors.OLIVE};
   border: none;
-  width: 150px;
+  width: ${(props) => props.long ? '250px' : '150px'};
   height: 48px;
   margin-top: 10px;
   align-self: flex-end;
   font-weight: normal;
   letter-spacing: 4px;
   cursor: pointer;
-
   @media ${max.tabletSm} {
     align-self: center;
-    width: 50%;
+    width: ${(props) => props.long ? '100%' : '50%'};
     letter-spacing: 2px;
   }
 `;
