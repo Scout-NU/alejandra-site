@@ -108,7 +108,7 @@ const StarLabelContainer = styled.div`
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: -4em;
+  margin-top: -2em;
   @media ${min.tablet} {
     float: right;
   }
