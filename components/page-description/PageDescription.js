@@ -29,13 +29,21 @@ export default function PageDescription({
 
   return (
     <div>
-      <PageDescriptionContainer style={descriptionAnimation}>
+      <PageDescriptionContainer 
+                  initial={{opacity: 0, y: 100 }}
+                  animate={{opacity: 1, y: 0}} 
+                  transition={{ type: "spring", duration: 1, damping: 40, bounce: 0, delay: 2}} 
+      >
         <LongSparkArrow arrowText={arrowText} scrollTo={scrollTo} />
         <DescriptionContainer>
           <Description>{getString(description)}</Description>
         </DescriptionContainer>
       </PageDescriptionContainer>
-      <Img src={img.url} alt={img.alt} style={imgAnimation} />
+      <Img src={img.url} alt={img.alt} 
+            initial={{opacity: 0, x: 150 }}
+            animate={{opacity: .1, x: 0}} 
+            transition={{ type: "spring", duration: 4, bounce: 0}} 
+       />
     </div>
   );
 }

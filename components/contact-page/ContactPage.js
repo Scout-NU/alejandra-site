@@ -14,8 +14,6 @@ import {
   HeaderAndSquiggleContainer,
   SquiggleUnderline,
 } from './ContactPage.styles';
-import { useSpring } from 'react-spring';
-import { header } from '../../style/animations';
 
 export default function ContactPage({
   contactPageData,
@@ -56,12 +54,13 @@ export default function ContactPage({
 
   const scrollTo = 'contact-form';
 
-  const headerAnimation = useSpring(header);
-
   return (
     <>
       <Navigation navigationData={navigationData} />
-      <HeaderAndSquiggleContainer style={headerAnimation}>
+      <HeaderAndSquiggleContainer 
+      initial={{opacity: 0, x: -150 }}
+      animate={{opacity: 1, x: 0}} 
+      transition={{ type: "spring", duration: 4, bounce: 0}} >
         <H1Styled
           regular={contactPageTitleRegular}
           italicized={contactPageTitleItalic}

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { min } from '../../lib/responsive';
-import { animated } from 'react-spring';
+import { motion } from 'framer-motion';
 
-const HeaderandSquiggleContainer = styled(animated.div)`
+const HeaderandSquiggleContainer = styled(motion.div)`
   margin-left: -1.5em;
   @media ${min.tablet} {
     padding-bottom: 1.5em;
@@ -17,7 +17,7 @@ const SquiggleUnderline = styled.img`
   width: clamp(9em, 44vw, 10em);
   margin-top: 2em;
   margin-left: clamp(2.75em, 18vw, 4.5em);
-  padding: 0 1.5em 0 2em;
+  padding: 0 1.5 em 0 2em;
 
   @media ${min.tablet} {
     width: 14em;

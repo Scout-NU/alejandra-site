@@ -1,9 +1,9 @@
 import { P } from '../../style/typography';
 import styled from 'styled-components';
 import { min } from '../../lib/responsive';
-import { animated } from 'react-spring';
+import { motion } from 'framer-motion';
 
-const PageDescriptionContainer = styled(animated.div)`
+const PageDescriptionContainer = styled(motion.div)`
   display: flex;
   position: relative;
   padding: 4em 0 0 6.3em;
@@ -37,7 +37,7 @@ const Description = styled(P)`
   }
 `;
 
-const Img = styled(animated.img)`
+const Img = styled(motion.img)`
   opacity: 10%;
   object-fit: cover;
   position: absolute;

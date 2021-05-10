@@ -120,7 +120,9 @@ export default function StoryInquiryPage({
   return (
     <>
       <Navigation navigationData={navigationData} />
-      <H1StyledContainer>
+      <H1StyledContainer       initial={{opacity: 0, x: -150 }}
+      animate={{opacity: 1, x: 0}} 
+      transition={{ type: "spring", duration: 4, bounce: 0}} >
         <H1Styled
           regular={storySubmissionTitleRegular}
           italicized={storySubmissionTitleItalic}

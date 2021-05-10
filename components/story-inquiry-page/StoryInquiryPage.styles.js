@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { min } from '../../lib/responsive';
+import { motion } from 'framer-motion';
 
 const LongLinesDesktop = styled.img`
   display: none;
@@ -84,7 +85,7 @@ const SquiggleWavy = styled.img`
   }
 `;
 
-const H1StyledContainer = styled.div`
+const H1StyledContainer = styled(motion.div)`
   @media ${min.tablet} {
     padding-bottom: 0.5em;
   }

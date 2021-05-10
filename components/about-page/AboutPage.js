@@ -9,8 +9,6 @@ import {
   SquiggleUnderline,
 } from './AboutPage.style';
 import { icons } from '../../style/icons';
-import { useSpring } from 'react-spring';
-import { header } from '../../style/animations';
 
 export default function AboutPage({
   aboutPageData,
@@ -85,12 +83,13 @@ export default function AboutPage({
   };
 
   const scrollTo = 'about-founder';
-  const headerAnimation = useSpring(header);
 
   return (
     <>
       <Navigation navigationData={navigationData} />
-      <HeaderandSquiggleContainer style={headerAnimation}>
+      <HeaderandSquiggleContainer       initial={{opacity: 0, x: -150 }}
+      animate={{opacity: 1, x: 0}} 
+      transition={{ type: "spring", duration: 4, bounce: 0}} >
         <H1Styled
           regular={aboutPageTitleRegular}
           italicized={aboutPageTitleItalic}
