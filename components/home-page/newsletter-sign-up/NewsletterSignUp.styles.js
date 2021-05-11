@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { max } from '../../../lib/responsive';
-import { H2, P } from '../../../style/typography';
+import { H2, P, InputInfoText } from '../../../style/typography';
 import { colors } from '../../../style/colors';
 import { icons } from '../../../style/icons';
 import TextInputField from '../../text-input-field/TextInputField';
+import { HoverAnimationButton } from '../../animation-base-components/AnimationBaseComponents';
 
 export const NewsletterSignUpWrapper = styled.div`
   display: flex;
@@ -26,10 +27,11 @@ export const NewsletterSignUpTitle = styled(H2)`
   font-size: clamp(2em, 3vw, 3em);
   margin-left: max(-12%, -200px);
   text-transform: lowercase;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media ${max.tabletSm} {
     margin-left: -5%;
-    margin-bottom: 5%;
   }
 `;
 
@@ -43,12 +45,28 @@ export const ContentWrapper = styled.div`
 
 export const NewsletterDescriptionText = styled(P)`
   margin-top: 0px;
+  margin-bottom: 0;
 `;
 
-export const NewsletterSignUpTextInput = styled(TextInputField)`
-  margin-bottom: 20px;
+export const PrivacyPolicyLinkText = styled(InputInfoText)`
+  margin: -1.5em 0 1em 0;
 `;
 
-export const PrivacyPolicyLinkText = styled.div`
-  margin: -5px 0;
+export const SubmitButton = styled(P).attrs({
+  as: HoverAnimationButton,
+})`
+  color: ${colors.WHITE};
+  background-color: ${colors.OLIVE};
+  border: none;
+  width: 150px;
+  height: 48px;
+  align-self: flex-end;
+  font-weight: normal;
+  letter-spacing: 0.13em;
+  cursor: pointer;
+
+  @media ${max.tabletSm} {
+    align-self: center;
+    width: 50%;
+  }
 `;
