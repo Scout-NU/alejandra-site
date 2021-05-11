@@ -24,14 +24,14 @@ export const RedStar = styled.img`
   }
 `;
 
-
 export const SubmitButton = styled(P).attrs({
   as: HoverAnimationButton,
+  ariaLabel: 'Submission button',
 })`
   color: ${colors.WHITE};
   background-color: ${colors.OLIVE};
   border: none;
-  width: ${(props) => props.long ? '250px' : '150px'};
+  width: ${(props) => (props.long ? '250px' : '150px')};
   height: 48px;
   margin-top: 10px;
   align-self: flex-end;
@@ -40,7 +40,7 @@ export const SubmitButton = styled(P).attrs({
   cursor: pointer;
   @media ${max.tabletSm} {
     align-self: center;
-    width: ${(props) => props.long ? '100%' : '50%'};
+    width: ${(props) => (props.long ? '100%' : '50%')};
     letter-spacing: 2px;
   }
 `;

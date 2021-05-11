@@ -382,9 +382,9 @@ export default function StoryInquiryForm({
         </ResourceLinksContainer>
         <ButtonWrapper>
           <SubmitButton
-            aria-label="Submission Button"
             color={colors.WHITE}
             type="submit"
+            role="button"
             long
             onClick={() => {
               if (submitRequest()) {
@@ -394,7 +394,7 @@ export default function StoryInquiryForm({
             }}
           >
             SUBMIT MY STORY
-        </SubmitButton>
+          </SubmitButton>
         </ButtonWrapper>
         {isConfirmationPopupOpen && (
           <ConfirmationPopup
@@ -437,8 +437,9 @@ export default function StoryInquiryForm({
     Signature: ${trimmedDataUrl}%0A
     `;
     if (isValidSubmission()) {
-      const request = `${emailEndpoint}?name=${fields['name']}&email=${fields[fieldNames.EMAIL]
-        }&subject=${subject}&body=${body}`;
+      const request = `${emailEndpoint}?name=${fields['name']}&email=${
+        fields[fieldNames.EMAIL]
+      }&subject=${subject}&body=${body}`;
       axios
         .post(proxyurl + request, axiosConfig)
         .then((response) => {

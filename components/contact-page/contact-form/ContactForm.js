@@ -82,8 +82,8 @@ export default function ContactForm({ togglePopup }) {
       </InputBoxWrapper>
       <ButtonWrapper>
         <SubmitButton
-          aria-label="Submission Button"
           color={colors.WHITE}
+          role="button"
           type="submit"
           onClick={() => {
             if (submitRequest()) {
