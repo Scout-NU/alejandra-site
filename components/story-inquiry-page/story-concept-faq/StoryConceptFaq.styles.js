@@ -51,10 +51,15 @@ const AnswerContainer = styled.div`
   }
 `;
 
+const ScrollToFaq = styled.div`
+  margin-top: 1em;
+`;
+
 export {
   FaqContainer,
   QuestionAnswerContainer,
   QuestionContainer,
   AnswerContainer,
+  ScrollToFaq,
   SparkArrowContainer,
 };
